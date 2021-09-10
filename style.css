@@ -58,8 +58,12 @@ p {
   display: grid;
   place-items: center;
   text-align: center;
-  background-color: #f1c9c9;
   padding: 5rem;
+  background-color: #f1c9c9;
+  border: solid black;
+  margin-left: 10rem;
+  margin-right: 10rem;
+
 }
 
 #om_os h4 {
@@ -67,8 +71,8 @@ p {
 }
 
 #om_os p {
-  margin-left: 10rem;
-  margin-right: 10rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
   margin-top: 0rem;
   font-weight: bold;
 }

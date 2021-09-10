@@ -41,7 +41,7 @@ h4 {
   font-family: balboa-plus-fill, sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   text-align: center;
 }
 
@@ -63,7 +63,6 @@ p {
   border: solid black;
   margin-left: 10rem;
   margin-right: 10rem;
-
 }
 
 #om_os h4 {
@@ -73,8 +72,8 @@ p {
 #om_os p {
   margin-left: 5rem;
   margin-right: 5rem;
-  margin-top: 0rem;
-  font-weight: bold;
+  margin-top: -2rem;
+  font-size: 1rem;
 }
 
 /* Style af knapper på forside */
@@ -246,6 +245,7 @@ button::after {
 button:hover::after {
   width: 100%;
 }
+
 
 /********************** SINGLEVIEW *********************/
 .single_view {

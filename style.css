@@ -190,7 +190,7 @@ header nav {
   text-align: center;
 }
 
-.destinationer button {
+button {
   font-family: balboa-plus-fill, sans-serif;
   color: black;
   border: 0.1rem solid black;
@@ -200,7 +200,7 @@ header nav {
   width: 8rem;
 }
 
-.destinationer button::after {
+button::after {
   content: "";
   width: 0%;
   height: 0.1rem;
@@ -210,8 +210,16 @@ header nav {
   transition: 0.5s;
 }
 
-.destinationer button:hover::after {
+button:hover::after {
   width: 100%;
+}
+
+/********************** SINGLEVIEW *********************/
+.single_view {
+  grid-column: 2/3;
+}
+.single_view article {
+  justify-content: center;
 }
 
 /* ----- */

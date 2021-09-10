@@ -20,18 +20,24 @@
       </nav>
     </header>
 
-    <main class="destinationer">
+    <main class="single_view">
       <button>Tilbage til oversigt</button>
       <h2></h2>
-      <section class="data_container"></section>
-      <template>
+      <section>
         <article id="liste">
-          <img src="img/splash.svg" alt="splash" />
-          <h3></h3>
-          <p class="land"></p>
-          <p class="beskrivelse"></p>
+          <h2></h2>
+          <figure>
+            <img src="img/splash.svg" alt="splash" />
+          </figure>
+          <div>
+            <p class="land"></p>
+            <p class="beskrivelse"></p>
+            <p class="højsæson"></p>
+            <p class="klima"></p>
+            <p class="tip"></p>
+          </div>
         </article>
-      </template>
+      </section>
     </main>
     <footer>Footer</footer>
     <script src="burgermenu.js"></script>
@@ -53,11 +59,16 @@
         visDestination();
       }
       function visDestination() {
-        document.querySelector("h3").textContent = destination.by;
+        document.querySelector("h2").textContent = destination.by;
         document.querySelector("img").src = "img/splash.svg";
+        document.querySelector(".land").textContent = destination.land;
         document.querySelector(".beskrivelse").textContent =
           destination.beskrivelse;
-        document.querySelector(".land").textContent = destination.land;
+        document.querySelector(".højsæson").textContent =
+          "Højsæson: " + destination.højsæson;
+        document.querySelector(".klima").textContent =
+          "Klima: " + destination.klima;
+        document.querySelector(".tip").textContent = "Tip: " + destination.tip;
       }
       document.querySelector("button").addEventListener("click", () => {
         window.history.back();

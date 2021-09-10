@@ -32,8 +32,6 @@
           <button data-kategori="Kroatien">Kroatien</button>
           <button data-kategori="Frankrig">Frankrig</button>
           <button data-kategori="Danmark">Danmark</button>
-          <button data-kategori="Tyskland">Tyskland</button>
-
         </nav>
       </article>
       <section class="data-container"></section>
@@ -47,33 +45,7 @@
       </template>
     </main>
     <footer>Footer</footer>
-    <script src="script.js">
-
-        // Oprettelse af variabler
-        let listeDestinationer;
-        let filter = "alle";
-        container = document.querySelector("section");
-        temp = document.querySelector("template").content;
-        const kategoriNavn = document.querySelector("h2");
-
-
-        // Opret forbindelse til restdb herunder link og nøgle
-        const url = "https://destinationer-f732.restdb.io/rest/destinationer";
-        const options = {
-        headers: {"x-apikey": "de793eaae0f0839a15545ba235ff12f3cc543",
-      },
-        };
-
-        // Oprettelse af start function. denne starter når DOM'en er loaded
-        document.addEventListener("DOMContentLoaded", start);
-
-
-        // Her hentes data ind fra restdb via fetch
-        async function hentdata() {
-          const response = await fetch(url, options);
-          listeDestinationer = await response.json();
-          visListe();
-        }
-    </script>
+    <script src="burgermenu.js"></script>
+    <script src="filter.js"></script>
   </body>
 </html>

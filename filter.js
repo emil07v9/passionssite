@@ -1,14 +1,14 @@
 // Oprettelse af variabler
 let listeDestinationer;
 let filter = "alle";
-container = document.querySelector("section");
-temp = document.querySelector("template").content;
+const container = document.querySelector(".data_container");
+const temp = document.querySelector("template").content;
 const kategoriNavn = document.querySelector("h2");
 
 // Opret forbindelse til restdb herunder link og nøgle
 const url = "https://destinationer-f732.restdb.io/rest/destinationer";
 const options = {
-  headers: { "x-apikey": "de793eaae0f0839a15545ba235ff12f3cc543" },
+  headers: { "x-apikey": "613b165043cedb6d1f97ef44" },
 };
 
 // Her hentes data ind fra restdb via fetch
@@ -16,16 +16,43 @@ async function hentdata() {
   const response = await fetch(url, options);
   listeDestinationer = await response.json();
   visListe();
-  console.log(listeDestinationer);
 }
 
+// Når menuen vises, bestemmers der her hvad der skal vises om hver ret og hvor informationerne om disse skal placeres henne
+function visListe() {
+  container.textContent = "";
+
+  listeDestinationer.forEach((dest) => {
+    if (filter === dest.land || filter == dest.ferietype || filter == "alle") {
+      let klon = temp.cloneNode(true);
+      klon.querySelector("h3").textContent = dest.by;
+      klon.querySelector("img").src = "img/splash.svg";
+      klon.querySelector(".kortbeskrivelse").textContent = dest.kortbeskrivelse;
+      klon.querySelector(".land").textContent = dest.land;
+      klon.querySelector("article").addEventListener("click", () => {
+        location.href = "singleview.html?id=" + dest._id;
+      });
+      container.appendChild(klon);
+      console.log(filter);
+    }
+  });
+}
 // Oprettelse af start function. denne starter når DOM'en er loaded
 document.addEventListener("DOMContentLoaded", start);
 
 function start() {
-  const filterKnapper = document.querySelectorAll("nav button");
+  const filterKnapper = document.querySelectorAll(".knapper nav button");
   filterKnapper.forEach((knap) =>
     knap.addEventListener("click", filtrerDestinationer)
   );
   hentdata();
+}
+function filtrerDestinationer() {
+  filter = this.dataset.kategori;
+
+  document.querySelector(".valgt").classList.remove("valgt");
+  this.classList.add("valgt");
+  visListe();
+
+  kategoriNavn.textContent = this.textContent;
 }

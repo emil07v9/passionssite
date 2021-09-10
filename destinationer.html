@@ -20,12 +20,13 @@
       </nav>
     </header>
     <main class="destinationer">
-      <section id="first_section">
+      <!-- <section id="first_section">
         <h2>Destinationer</h2>
-      </section>
+      </section> -->
       <!-- Filter for dataindsamling -->
       <article class="knapper">
         <nav>
+          <h3>Land:</h3>
           <button data-kategori="alle" class="valgt">Alle</button>
           <button data-kategori="Spanien">Spanien</button>
           <button data-kategori="Italien">Italien</button>
@@ -34,13 +35,22 @@
           <button data-kategori="Danmark">Danmark</button>
         </nav>
       </article>
-      <section class="data-container"></section>
+      <article class="knapper">
+        <nav>
+          <h3>Ferietype:</h3>
+          <button data-kategori="Aktiv ferie">Aktiv ferie</button>
+          <button data-kategori="Badeferie">Badeferie</button>
+          <button data-kategori="Storbyferie">Storbyferie</button>
+        </nav>
+      </article>
+      <h2></h2>
+      <section class="data_container"></section>
       <template>
         <article id="liste">
-          <img src="" alt="" />
+          <img src="img/splash.svg" alt="splash" />
           <h3></h3>
-          <p class=""></p>
-          <p class=""></p>
+          <p class="land"></p>
+          <p class="kortbeskrivelse"></p>
         </article>
       </template>
     </main>

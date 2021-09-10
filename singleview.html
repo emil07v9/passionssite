@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Away from home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tig0ggs.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div id="menuknap">☰</div>
+        <ul id="menu" class="hidden">
+          <li><a href="index.html">Hjem</a></li>
+          <li><a href="destinationer.html">Destinationer</a></li>
+          <li><a href="om_os.html">Om os</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="destinationer">
+      <button>Tilbage til oversigt</button>
+      <h2></h2>
+      <section class="data_container"></section>
+      <template>
+        <article id="liste">
+          <img src="img/splash.svg" alt="splash" />
+          <h3></h3>
+          <p class="land"></p>
+          <p class="beskrivelse"></p>
+        </article>
+      </template>
+    </main>
+    <footer>Footer</footer>
+    <script src="burgermenu.js"></script>
+    <script>
+      // Opret forbindelse til restdb herunder link og nøgle
+      const url = "https://destinationer-f732.restdb.io/rest/destinationer/";
+      const options = {
+        headers: { "x-apikey": "613b165043cedb6d1f97ef44" },
+      };
+      const urlParams = new URLSearchParams(window.location.search);
+      const id = urlParams.get("id");
+      let destination;
+
+      document.addEventListener("DOMContentLoaded", hentdata);
+      async function hentdata() {
+        const JSONData = await fetch(url + id, options);
+        destination = await JSONData.json();
+        console.log(destination);
+        visDestination();
+      }
+      function visDestination() {
+        document.querySelector("h3").textContent = destination.by;
+        document.querySelector("img").src = "img/splash.svg";
+        document.querySelector(".beskrivelse").textContent =
+          destination.beskrivelse;
+        document.querySelector(".land").textContent = destination.land;
+      }
+      document.querySelector("button").addEventListener("click", () => {
+        window.history.back();
+      });
+    </script>
+  </body>
+</html>

@@ -21,23 +21,24 @@
     </header>
 
     <main class="single_view">
-      <button>Tilbage til oversigt</button>
-      <h2></h2>
-      <section>
-        <article id="liste">
-          <h2></h2>
-          <figure>
-            <img src="img/splash.svg" alt="splash" />
-          </figure>
-          <div>
-            <p class="land"></p>
-            <p class="beskrivelse"></p>
-            <p class="højsæson"></p>
-            <p class="klima"></p>
-            <p class="tip"></p>
-          </div>
-        </article>
-      </section>
+      <div id="tilbage_knap">
+        <button>Tilbage til oversigt</button>
+      </div>
+      <!-- <section> -->
+      <article id="single_liste">
+        <h1></h1>
+        <figure>
+          <img src="img/splash.svg" alt="splash" />
+        </figure>
+        <div>
+          <p class="land"></p>
+          <p class="beskrivelse"></p>
+          <p class="højsæson"></p>
+          <p class="klima"></p>
+          <p class="tip"></p>
+        </div>
+      </article>
+      <!-- </section> -->
     </main>
     <footer>Footer</footer>
     <script src="burgermenu.js"></script>
@@ -59,7 +60,7 @@
         visDestination();
       }
       function visDestination() {
-        document.querySelector("h2").textContent = destination.by;
+        document.querySelector("h1").textContent = destination.by;
         document.querySelector("img").src = "img/splash.svg";
         document.querySelector(".land").textContent = destination.land;
         document.querySelector(".beskrivelse").textContent =

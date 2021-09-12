@@ -8,6 +8,14 @@ main section {
   grid-column: 2/3;
 }
 
+/* body {
+  display: grid;
+  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
+}
+main {
+  grid-column: 2/3;
+} */
+
 /******Img størrelse******/
 img {
   display: block;
@@ -20,7 +28,7 @@ img {
 h1 {
   font-family: balboa-plus-primary, sans-serif;
   font-weight: 400;
-  font-style: normal;
+  font-size: 2.5rem;
 }
 
 h2 {
@@ -246,13 +254,14 @@ button:hover::after {
   width: 100%;
 }
 
-
 /********************** SINGLEVIEW *********************/
-.single_view {
+#single_liste,
+#tilbage_knap {
   grid-column: 2/3;
 }
-.single_view article {
-  justify-content: center;
+
+#single_liste h1 {
+  text-align: center;
 }
 
 /* ----- */

@@ -8,14 +8,6 @@ main section {
   grid-column: 2/3;
 }
 
-/* body {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-}
-main {
-  grid-column: 2/3;
-} */
-
 /******Img størrelse******/
 img {
   display: block;
@@ -28,7 +20,7 @@ img {
 h1 {
   font-family: balboa-plus-primary, sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3.6rem;
 }
 
 h2 {
@@ -62,52 +54,23 @@ p {
 
 /* Infoside */
 
-#om_os {
+.om_os {
   background-image: url(/img/splash.svg);
-  width: auto;
-  height: 90vh;
+  /* width: auto; */
   background-size: cover;
   padding: 2rem;
 }
 
-#om_os_tekst {
-  place-items: center;
+.om_os_tekst {
+  grid-column: 2/3;
+  background-color: #f3f4e6;
+  border: solid orange;
+  padding: 2rem;
   text-align: center;
-  padding: 2.5rem;
-  background-color: #f1c9c9;
-  border: solid black;
-  margin-left: 10rem;
-  margin-right: 10rem;
 }
 
-#om {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  font-size: 1rem;
-}
-
-/* Style af knapper på forside */
-.read_more {
-  font-family: balboa-plus-fill, sans-serif;
-  color: #af7171;
-  border: 0.15rem solid #af7171;
-  background-color: transparent;
-  padding: 0.8rem;
-  width: 8rem;
-}
-
-.read_more::after {
-  content: "";
-  width: 0%;
-  height: 0.1rem;
-  background: #c79f93;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.read_more:hover::after {
-  width: 100%;
+.om_os_tekst p {
+  text-align: left;
 }
 
 /*BURGERMENU*/
@@ -186,10 +149,21 @@ footer {
   grid-column: 1/4;
 
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background-image: url(img/splash.svg);
   background-size: cover;
   background-position: 47% 0%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.index #first_section h1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #f3f4e6;
+  padding: 0.58rem;
+  color: #ff603f;
 }
 
 .index #second_section {
@@ -230,7 +204,8 @@ footer {
   justify-content: center;
 }
 
-.index a {
+.index a,
+.om_os a {
   font-family: balboa-plus-fill, sans-serif;
   color: black;
   text-decoration: none;
@@ -406,8 +381,8 @@ footer img {
   }
 }
 
-@media (min-width: 700px) and (max-width: 900px) {
-  #om_os {
+/* @media (min-width: 700px) and (max-width: 900px) {
+  .om_os {
     background-image: url(/img/splash.svg);
     width: auto;
     height: 90vh;
@@ -415,7 +390,7 @@ footer img {
     padding: 5rem;
   }
 
-  #om_os_tekst {
+  .om_os_tekst {
     place-items: center;
     text-align: center;
     padding: 1rem;
@@ -427,14 +402,14 @@ footer img {
 }
 
 @media (max-width: 700px) {
-  #om_os {
+  .om_os {
     padding: 1rem;
     margin: 0;
     background-size: cover;
   }
 
-  #om_os_tekst {
+  .om_os_tekst {
     margin: 0.5rem;
     padding: 1rem;
   }
-}
+} */

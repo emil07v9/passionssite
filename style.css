@@ -80,15 +80,11 @@ p {
   margin-right: 10rem;
 }
 
-
-
 #om {
   margin-left: 5rem;
   margin-right: 5rem;
   font-size: 1rem;
 }
-
-
 
 /* Style af knapper på forside */
 .read_more {
@@ -115,12 +111,11 @@ p {
 }
 
 /*BURGERMENU*/
-/* Logo og burgermenu opsætning+placering */
-/* header {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-} */
+/* Logo og burgermenu opsætning + placering  */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
 
 /* Burgerpadding */
 header nav {
@@ -163,15 +158,17 @@ header nav {
   padding: 0.3rem;
 }
 
-.logo img {
-  display: inline;
-  width: 7rem;
-}
-
 .logo {
-  padding-left: 1rem;
+  text-align: right;
+  grid-column: 3/4;
+  padding: 1rem;
+  margin: 0;
 }
 
+.logo img {
+  width: 5rem;
+  display: inline;
+}
 /* Footer */
 
 footer {
@@ -325,7 +322,7 @@ button:hover::after {
 
 /* ----- */
 
-@media (min-width: 700px) {
+@media (min-width: 1100px) {
   /***********Burgermenu**********/
   #menuknap {
     display: none;
@@ -342,7 +339,12 @@ button:hover::after {
   }
 
   .logo img {
-    width: 9rem;
+    width: 6rem;
+  }
+
+  .logo {
+    text-align: center;
+    grid-column: 2/3;
   }
 
   /* Hover-effekt menu - understregning */

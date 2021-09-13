@@ -63,10 +63,17 @@ p {
 /* Infoside */
 
 #om_os {
-  display: grid;
+  background-image: url(/img/splash.svg);
+  width: auto;
+  height: 90vh;
+  background-size: cover;
+  padding: 5rem;
+}
+
+#om_os_tekst {
   place-items: center;
   text-align: center;
-  padding: 5rem;
+  padding: 2.5rem;
   background-color: #f1c9c9;
   border: solid black;
   margin-left: 10rem;
@@ -317,5 +324,38 @@ button:hover::after {
 
   header nav ul li:hover::after {
     width: 100%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  #om_os {
+    background-image: url(/img/splash.svg);
+    width: auto;
+    height: 90vh;
+    background-size: cover;
+    padding: 5rem;
+  }
+
+  #om_os_tekst {
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1c9c9;
+    border: solid black;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #om_os {
+    padding: 1rem;
+    margin: 0;
+    background-size: cover;
+  }
+
+  #om_os_tekst {
+    margin: 0.5rem;
+    padding: 1rem;
   }
 }

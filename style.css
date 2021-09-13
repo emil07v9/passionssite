@@ -111,12 +111,11 @@ p {
 }
 
 /*BURGERMENU*/
-/* Logo og burgermenu opsætning+placering */
-/* header {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-} */
+/* Logo og burgermenu opsætning + placering  */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
 
 /* Burgerpadding */
 header nav {
@@ -159,15 +158,17 @@ header nav {
   padding: 0.3rem;
 }
 
-.logo img {
-  display: inline;
-  width: 7rem;
-}
-
 .logo {
-  padding-left: 1rem;
+  text-align: right;
+  grid-column: 3/4;
+  padding: 1rem;
+  margin: 0;
 }
 
+.logo img {
+  width: 5rem;
+  display: inline;
+}
 /* Footer */
 
 footer {
@@ -196,7 +197,7 @@ footer {
 }
 
 /* index-side */
-.index #third_section {
+.index .data_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
@@ -204,17 +205,35 @@ footer {
   text-align: center;
 }
 
-/* Indhold i bokse (pad) og luft om bokse (marg)*/
-.index #third_section article {
-  border: 0.2rem solid #af7171;
-  margin: 3rem;
-  width: 300px;
-  height: 250px;
+.index .data_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1rem;
+}
+
+/* box-style */
+.index #liste {
+  border: solid orange 0.1rem;
+  height: 350px;
+  margin: 0.8em;
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.index #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 .index #fourth_section {
   display: flex;
   justify-content: center;
+}
+
+.index a {
+  font-family: balboa-plus-fill, sans-serif;
+  color: black;
+  text-decoration: none;
 }
 
 /********************** DESTINATIONER *********************/
@@ -234,6 +253,11 @@ footer {
   margin: 0.8em;
   padding: 0.5em;
   text-align: center;
+  cursor: pointer;
+}
+
+.destinationer #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 /* Style af knapper */
@@ -251,6 +275,7 @@ button {
   padding: 0.8rem;
   margin: 0.5rem;
   width: 8rem;
+  cursor: pointer;
 }
 
 button::after {
@@ -297,7 +322,50 @@ button:hover::after {
 
 /* ----- */
 
-@media (min-width: 700px) {
+hr {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  color: orange;
+}
+footer {
+  display: grid;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Centrering af tekst */
+footer .section_wrapper {
+  text-align: center;
+}
+
+/* Ikoner vandret og center */
+.socialemedier {
+  display: flex;
+  justify-content: center;
+}
+
+/* Str img */
+footer img {
+  width: 4rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+/* Links */
+#section_footer a {
+  text-decoration: none;
+  color: black;
+  font-family: nimbus-sans, sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+#section_footer a:hover {
+  color: #00000052;
+}
+
+@media (min-width: 1100px) {
   /***********Burgermenu**********/
   #menuknap {
     display: none;
@@ -314,7 +382,12 @@ button:hover::after {
   }
 
   .logo img {
-    width: 9rem;
+    width: 6rem;
+  }
+
+  .logo {
+    text-align: center;
+    grid-column: 2/3;
   }
 
   /* Hover-effekt menu - understregning */

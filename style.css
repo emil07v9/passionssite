@@ -63,26 +63,32 @@ p {
 /* Infoside */
 
 #om_os {
-  display: grid;
+  background-image: url(/img/splash.svg);
+  width: auto;
+  height: 90vh;
+  background-size: cover;
+  padding: 2rem;
+}
+
+#om_os_tekst {
   place-items: center;
   text-align: center;
-  padding: 5rem;
+  padding: 2.5rem;
   background-color: #f1c9c9;
   border: solid black;
   margin-left: 10rem;
   margin-right: 10rem;
 }
 
-#om_os h4 {
-  margin-top: 0rem;
-}
 
-#om_os p {
+
+#om {
   margin-left: 5rem;
   margin-right: 5rem;
-  margin-top: -2rem;
   font-size: 1rem;
 }
+
+
 
 /* Style af knapper på forside */
 .read_more {
@@ -164,6 +170,17 @@ header nav {
 
 .logo {
   padding-left: 1rem;
+}
+
+/* Footer */
+
+footer {
+  font-family: balboa-plus-fill, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 /********************** INDEX *********************/
@@ -341,5 +358,38 @@ button:hover::after {
 
   header nav ul li:hover::after {
     width: 100%;
+  }
+}
+
+@media (min-width: 700px) and (max-width: 900px) {
+  #om_os {
+    background-image: url(/img/splash.svg);
+    width: auto;
+    height: 90vh;
+    background-size: cover;
+    padding: 5rem;
+  }
+
+  #om_os_tekst {
+    place-items: center;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f1c9c9;
+    border: solid black;
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+@media (max-width: 700px) {
+  #om_os {
+    padding: 1rem;
+    margin: 0;
+    background-size: cover;
+  }
+
+  #om_os_tekst {
+    margin: 0.5rem;
+    padding: 1rem;
   }
 }

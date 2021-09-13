@@ -31,7 +31,7 @@ function visListe() {
     if (filter == dest.topdestination) {
       let klon = temp.cloneNode(true).content;
       klon.querySelector("h2").textContent = dest.by;
-      klon.querySelector("img").src = "img/splash.svg";
+      klon.querySelector("img").src = "img/" + dest.billede + ".svg";
       klon.querySelector(".land").textContent = dest.land;
       klon.querySelector("article").addEventListener("click", () => {
         location.href = "singleview.html?id=" + dest._id;

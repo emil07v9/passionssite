@@ -26,7 +26,7 @@ function visListe() {
     if (filter === dest.land || filter == dest.ferietype || filter == "alle") {
       let klon = temp.cloneNode(true);
       klon.querySelector("h3").textContent = dest.by;
-      klon.querySelector("img").src = "img/splash.svg";
+      klon.querySelector("img").src = "img/" + dest.billede + ".svg";
       klon.querySelector(".kortbeskrivelse").textContent = dest.kortbeskrivelse;
       klon.querySelector(".land").textContent = dest.land;
       klon.querySelector("article").addEventListener("click", () => {

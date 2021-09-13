@@ -317,8 +317,7 @@ footer img {
 }
 
 /* Links */
-#section_footer a,
-a {
+#section_footer a {
   text-decoration: none;
   color: black;
   font-family: balboa-plus-fill, sans-serif;

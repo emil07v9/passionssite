@@ -8,14 +8,6 @@ main section {
   grid-column: 2/3;
 }
 
-/* body {
-  display: grid;
-  grid-template-columns: 1fr minmax(0, 1000px) 1fr;
-}
-main {
-  grid-column: 2/3;
-} */
-
 /******Img størrelse******/
 img {
   display: block;
@@ -28,7 +20,7 @@ img {
 h1 {
   font-family: balboa-plus-primary, sans-serif;
   font-weight: 400;
-  font-size: 2.5rem;
+  font-size: 3.6rem;
 }
 
 h2 {
@@ -62,59 +54,31 @@ p {
 
 /* Infoside */
 
-#om_os {
-  display: grid;
-  place-items: center;
+.om_os {
+  background-image: url(/img/splash.svg);
+  /* width: auto; */
+  background-size: cover;
+  padding: 2rem;
+}
+
+.om_os_tekst {
+  grid-column: 2/3;
+  background-color: #f3f4e6;
+  border: solid orange;
+  padding: 2rem;
   text-align: center;
-  padding: 5rem;
-  background-color: #f1c9c9;
-  border: solid black;
-  margin-left: 10rem;
-  margin-right: 10rem;
 }
 
-#om_os h4 {
-  margin-top: 0rem;
-}
-
-#om_os p {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  margin-top: -2rem;
-  font-size: 1rem;
-}
-
-/* Style af knapper på forside */
-.read_more {
-  font-family: balboa-plus-fill, sans-serif;
-  color: #af7171;
-  border: 0.15rem solid #af7171;
-  background-color: transparent;
-  padding: 0.8rem;
-  width: 8rem;
-}
-
-.read_more::after {
-  content: "";
-  width: 0%;
-  height: 0.1rem;
-  background: #c79f93;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-
-.read_more:hover::after {
-  width: 100%;
+.om_os_tekst p {
+  text-align: left;
 }
 
 /*BURGERMENU*/
-/* Logo og burgermenu opsætning+placering */
-/* header {
-  background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-} */
+/* Logo og burgermenu opsætning + placering  */
+header {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+}
 
 /* Burgerpadding */
 header nav {
@@ -157,13 +121,16 @@ header nav {
   padding: 0.3rem;
 }
 
-.logo img {
-  display: inline;
-  width: 7rem;
+.logo {
+  text-align: right;
+  grid-column: 3/4;
+  padding: 1rem;
+  margin: 0;
 }
 
-.logo {
-  padding-left: 1rem;
+.logo img {
+  width: 5rem;
+  display: inline;
 }
 
 /********************** INDEX *********************/
@@ -172,10 +139,21 @@ header nav {
   grid-column: 1/4;
 
   width: 100%;
-  height: 100vh;
+  height: 40vh;
   background-image: url(img/splash.svg);
   background-size: cover;
   background-position: 47% 0%;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.index #first_section h1 {
+  grid-column: 2/3;
+  grid-row: 2/3;
+  background-color: #f3f4e6;
+  padding: 0.58rem;
+  color: #ff603f;
 }
 
 .index #second_section {
@@ -183,7 +161,7 @@ header nav {
 }
 
 /* index-side */
-.index #third_section {
+.index .data_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
@@ -191,17 +169,36 @@ header nav {
   text-align: center;
 }
 
-/* Indhold i bokse (pad) og luft om bokse (marg)*/
-.index #third_section article {
-  border: 0.2rem solid #af7171;
-  margin: 3rem;
-  width: 300px;
-  height: 250px;
+.index .data_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1rem;
+}
+
+/* box-style */
+.index #liste {
+  border: solid orange 0.1rem;
+  height: 350px;
+  margin: 0.8em;
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.index #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 .index #fourth_section {
   display: flex;
   justify-content: center;
+}
+
+.index a,
+.om_os a {
+  font-family: balboa-plus-fill, sans-serif;
+  color: black;
+  text-decoration: none;
 }
 
 /********************** DESTINATIONER *********************/
@@ -221,6 +218,11 @@ header nav {
   margin: 0.8em;
   padding: 0.5em;
   text-align: center;
+  cursor: pointer;
+}
+
+.destinationer #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 /* Style af knapper */
@@ -238,6 +240,7 @@ button {
   padding: 0.8rem;
   margin: 0.5rem;
   width: 8rem;
+  cursor: pointer;
 }
 
 button::after {
@@ -284,7 +287,51 @@ button:hover::after {
 
 /* ----- */
 
-@media (min-width: 700px) {
+hr {
+  margin-top: 5rem;
+  margin-bottom: 0;
+  color: orange;
+}
+footer {
+  display: grid;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/* Centrering af tekst */
+footer .section_wrapper {
+  text-align: center;
+}
+
+/* Ikoner vandret og center */
+.socialemedier {
+  display: flex;
+  justify-content: center;
+}
+
+/* Str img */
+footer img {
+  width: 4rem;
+  margin: 0.5rem;
+  cursor: pointer;
+}
+
+/* Links */
+#section_footer a {
+  text-decoration: none;
+  color: black;
+  font-family: balboa-plus-fill, sans-serif;
+
+  font-weight: 300;
+  font-style: normal;
+  font-size: 1.2rem;
+}
+
+#section_footer a:hover {
+  color: #00000052;
+}
+
+@media (min-width: 1100px) {
   /***********Burgermenu**********/
   #menuknap {
     display: none;
@@ -301,7 +348,12 @@ button:hover::after {
   }
 
   .logo img {
-    width: 9rem;
+    width: 5rem;
+  }
+
+  .logo {
+    text-align: center;
+    grid-column: 2/3;
   }
 
   /* Hover-effekt menu - understregning */

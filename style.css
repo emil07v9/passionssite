@@ -183,7 +183,7 @@ header nav {
 }
 
 /* index-side */
-.index #third_section {
+.index .data_container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   place-items: center;
@@ -191,17 +191,35 @@ header nav {
   text-align: center;
 }
 
-/* Indhold i bokse (pad) og luft om bokse (marg)*/
-.index #third_section article {
-  border: 0.2rem solid #af7171;
-  margin: 3rem;
-  width: 300px;
-  height: 250px;
+.index .data_container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 1rem;
+}
+
+/* box-style */
+.index #liste {
+  border: solid orange 0.1rem;
+  height: 350px;
+  margin: 0.8em;
+  padding: 0.5em;
+  text-align: center;
+  cursor: pointer;
+}
+
+.index #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 .index #fourth_section {
   display: flex;
   justify-content: center;
+}
+
+.index a {
+  font-family: balboa-plus-fill, sans-serif;
+  color: black;
+  text-decoration: none;
 }
 
 /********************** DESTINATIONER *********************/
@@ -221,6 +239,11 @@ header nav {
   margin: 0.8em;
   padding: 0.5em;
   text-align: center;
+  cursor: pointer;
+}
+
+.destinationer #liste:hover {
+  border: solid orange 0.3rem;
 }
 
 /* Style af knapper */
@@ -238,6 +261,7 @@ button {
   padding: 0.8rem;
   margin: 0.5rem;
   width: 8rem;
+  cursor: pointer;
 }
 
 button::after {

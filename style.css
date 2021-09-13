@@ -67,7 +67,7 @@ p {
   width: auto;
   height: 90vh;
   background-size: cover;
-  padding: 5rem;
+  padding: 2rem;
 }
 
 #om_os_tekst {
@@ -80,16 +80,15 @@ p {
   margin-right: 10rem;
 }
 
-#om_os h4 {
-  margin-top: 0rem;
-}
 
-#om_os p {
+
+#om {
   margin-left: 5rem;
   margin-right: 5rem;
-  margin-top: -2rem;
   font-size: 1rem;
 }
+
+
 
 /* Style af knapper på forside */
 .read_more {
@@ -171,6 +170,17 @@ header nav {
 
 .logo {
   padding-left: 1rem;
+}
+
+/* Footer */
+
+footer {
+  font-family: balboa-plus-fill, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 /********************** INDEX *********************/

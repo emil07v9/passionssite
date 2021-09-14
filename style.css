@@ -455,6 +455,8 @@ footer a:hover {
 
   .om_os_tekst p {
     text-align: left;
+    font-size: 1rem;
+    margin: 2rem;
   }
 
   #first_section .om_os_billede {

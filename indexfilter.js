@@ -24,7 +24,7 @@ async function hentdata() {
   visListe();
 }
 
-// Når menuen vises, bestemmers der her hvad der skal vises om hver ret og hvor informationerne om disse skal placeres henne
+// Når menuen vises, bestemmers der her hvad der skal vises om hver destination og hvor informationerne om disse skal placeres henne
 function visListe() {
   console.log(topDestinationer);
   topDestinationer.forEach((dest) => {

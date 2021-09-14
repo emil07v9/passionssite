@@ -8,7 +8,17 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="https://use.typekit.net/tig0ggs.css" />
     <style>
+      .index #second_section {
+        display: grid;
+        justify-content: center;
+      }
+
+      .index .data_container {
+        text-align: center;
+      }
+
       .index section {
+        margin-bottom: 2rem;
       }
     </style>
   </head>
@@ -33,18 +43,14 @@
       <section id="second_section">
         <h2>Find din næste europæiske rejsedestination</h2>
         <p>
-          <i>
-            Bag AWAY FROM HOME står tre rejseglade unge piger. Her på siden er
-            det muligt at finde vores personlige rejsetips til både skiferier,
-            storbyferier og badeferier.
-          </i>
+          Bag AWAY FROM HOME står tre rejseglade unge piger. Her på siden er det
+          muligt at finde vores personlige rejsetips til både skiferier,
+          storbyferier og badeferier.
         </p>
       </section>
-      <section id="third_section">
+      <section class="data_container">
         <h3>Sæsonens top destinationer</h3>
       </section>
-
-      <section class="data_container"></section>
       <template>
         <article id="liste">
           <img src="img/splash.svg" alt="splash" />

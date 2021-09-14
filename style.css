@@ -364,7 +364,6 @@ footer img {
 #section_footer a {
   text-decoration: none;
   color: black;
-  font-family: balboa-plus-fill, sans-serif;
 
   font-weight: 300;
   font-style: normal;
@@ -375,6 +374,14 @@ footer img {
   color: #00000052;
 }
 @media (min-width: 700px) {
+}
+
+@media (min-width: 700px) {
+  /********************** FOOTER *********************/
+  .section_wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1100px) {
@@ -431,7 +438,7 @@ footer img {
   .om_os #first_section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-left: 4rem;
+    /* margin-left: 4rem; */
   }
 
   .om_os_tekst {

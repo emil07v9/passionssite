@@ -50,12 +50,13 @@ p {
   font-weight: 300;
   font-style: normal;
   font-size: 1.2rem;
+  max-width: 60ch;
 }
 
 /* Infoside */
 .om_os {
   background-image: url(/img/splash.svg);
-  
+
   /* width: auto; */
   background-size: cover;
   padding: 2rem;
@@ -261,8 +262,19 @@ button:hover::after {
   grid-column: 2/3;
 }
 
+#single_liste {
+  padding: 0.5rem;
+  display: grid;
+  justify-content: center;
+}
+
 #single_liste h1 {
   text-align: center;
+}
+
+#single_liste img {
+  height: 20rem;
+  width: auto;
 }
 
 /********************** FOOTER *********************/
@@ -349,5 +361,14 @@ footer img {
 
   header nav ul li:hover::after {
     width: 100%;
+  }
+
+  /* Singleview side */
+  #single_liste {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  #single_liste h1 {
+    grid-column: 1/3;
   }
 }

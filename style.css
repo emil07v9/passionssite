@@ -55,24 +55,24 @@ p {
 
 /* Infoside */
 .om_os {
-  background-image: url(/img/splash.svg);
-
-  /* width: auto; */
   background-size: cover;
-  padding: 2rem;
+  padding: 4rem;
+  padding-top: 1rem;
+  display: flex;
 }
 
 .om_os_tekst {
-  grid-column: 2/3;
-  background-color: #f3f4e6;
-  border: solid orange;
-  padding: 2rem;
+  background-color: #f7e2d4;
+  padding: 4rem;
   text-align: center;
+  padding-top: 1rem;
 }
 
 .om_os_tekst p {
   text-align: left;
 }
+
+
 
 /*BURGERMENU*/
 /* Logo og burgermenu opsætning + placering  */

@@ -334,7 +334,7 @@ footer {
 }
 
 /* Centrering af tekst */
-footer .section_wrapper {
+footer {
   text-align: center;
 }
 
@@ -352,24 +352,26 @@ footer img {
 }
 
 /* Links */
-#section_footer a {
-  text-decoration: none;
+footer a {
   color: black;
-
-  font-weight: 300;
-  font-style: normal;
-  font-size: 1.2rem;
 }
-
-#section_footer a:hover {
+footer a:hover {
   color: #00000052;
 }
 
 @media (min-width: 700px) {
   /********************** FOOTER *********************/
-  .section_wrapper {
-    display: flex;
-    justify-content: space-between;
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    align-items: center;
+  }
+  footer .socialemedier {
+    grid-column: 2;
+  }
+  footer .mail {
+    grid-row: 1;
   }
 }
 

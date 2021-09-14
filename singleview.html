@@ -18,6 +18,7 @@
           <li><a href="om_os.html">Om os</a></li>
         </ul>
       </nav>
+      <h1>Away from home</h1>
       <figure class="logo">
         <a href="index.html"><img src="img/logo.svg" alt="Logo" /></a>
       </figure>
@@ -29,7 +30,7 @@
       </div>
       <!-- <section> -->
       <article id="single_liste">
-        <h1></h1>
+        <h2></h2>
         <figure>
           <img src="" alt="" />
         </figure>
@@ -84,7 +85,7 @@
         visDestination();
       }
       function visDestination() {
-        document.querySelector("h1").textContent = destination.by;
+        document.querySelector("h2").textContent = destination.by;
         document.querySelector("article img").src =
           "img/" + destination.billede + ".svg";
         document.querySelector(".land").textContent = destination.land;

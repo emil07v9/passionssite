@@ -53,9 +53,9 @@ p {
 }
 
 /* Infoside */
-
 .om_os {
   background-image: url(/img/splash.svg);
+  
   /* width: auto; */
   background-size: cover;
   padding: 2rem;

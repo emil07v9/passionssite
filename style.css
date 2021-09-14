@@ -444,9 +444,9 @@ footer img {
     text-align: left;
   }
 
-  .om_os_billede {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  #first_section .om_os_billede {
+    grid-column: 2;
+    display: inline;
   }
   .om_os .kontaktformular #first_section {
     grid-column: 1/3;

@@ -53,23 +53,33 @@ p {
   max-width: 60ch;
 }
 
-/* Infoside */
-.om_os {
-  background-size: cover;
-  padding: 4rem;
+/* Om os side */
+.om_os #first_section {
+  padding: 0.1rem;
   padding-top: 1rem;
-  display: flex;
 }
 
 .om_os_tekst {
   background-color: #f7e2d4;
-  padding: 4rem;
+  padding: 1rem;
   text-align: center;
   padding-top: 1rem;
 }
 
 .om_os_tekst p {
   text-align: left;
+}
+
+.om_os_billede {
+  display: none;
+}
+
+.kontaktformular {
+  padding-top: 2rem;
+}
+
+.kontaktformular h2 {
+  text-align: center;
 }
 
 /* Kontaktformular */
@@ -104,17 +114,12 @@ input[type="submit"]:hover {
 
 /* Add a background color and some padding around the form */
 .container {
-  border-radius: 5px;
   background-color: #f1d0c0;
   padding: 20px;
 }
 
 label {
   font-family: balboa-plus-fill, sans-serif;
-}
-
-.om_os_billede {
-  width: 100%;
 }
 
 /*BURGERMENU*/
@@ -358,6 +363,8 @@ footer a {
 footer a:hover {
   color: #00000052;
 }
+@media (min-width: 700px) {
+}
 
 @media (min-width: 700px) {
   /********************** FOOTER *********************/
@@ -423,22 +430,30 @@ footer a:hover {
   #single_liste h1 {
     grid-column: 1/3;
   }
-}
 
-@media (max-width: 700px) {
-  .om_os {
+  /* Om os side */
+
+  .om_os #first_section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* margin-left: 4rem; */
+  }
+
+  .om_os_tekst {
+    background-color: #f7e2d4;
+    padding: 2rem;
+    padding-top: 1rem;
+  }
+
+  .om_os_tekst p {
+    text-align: left;
+  }
+
+  #first_section .om_os_billede {
+    grid-column: 2;
     display: inline;
   }
-
-  .om_os_billede {
-    display: none;
-  }
-
-  .kontaktformular {
-    padding-top: 2rem;
-  }
-
-  .kontaktformular h2 {
-    text-align: center;
+  .om_os .kontaktformular #first_section {
+    grid-column: 1/3;
   }
 }

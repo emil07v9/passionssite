@@ -72,8 +72,6 @@ p {
   text-align: left;
 }
 
-
-
 /*BURGERMENU*/
 /* Logo og burgermenu opsætning + placering  */
 header {
@@ -156,6 +154,8 @@ header nav {
 }
 .index #second_section {
   text-align: center;
+  display: grid;
+  justify-content: center;
 }
 
 .index .data_container {

@@ -290,7 +290,15 @@ button {
   cursor: pointer;
 }
 
-button::after {
+button:hover{
+  background-color: #f5ecbd;
+}
+
+button:hover:after {
+  width: 100%;
+}
+
+button:after {
   content: "";
   width: 0%;
   height: 0.1rem;
@@ -300,9 +308,9 @@ button::after {
   transition: 0.5s;
 }
 
-button:hover::after {
-  width: 100%;
-}
+.valgt {background-color: #f5ecbd;}
+
+
 
 /********************** SINGLEVIEW *********************/
 #single_liste,

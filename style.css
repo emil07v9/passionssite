@@ -421,7 +421,7 @@ footer a:hover {
   #pil_ned {
     display: inline;
     text-decoration: none;
-    font-size: 4rem;
+    font-size: 5rem;
     rotate: 270deg;
     grid-column: 2/3;
     grid-row: 2;
@@ -540,7 +540,7 @@ footer a:hover {
 /* oprettelse og definition af animation "pulse" på pil INDEX */
 .pulse {
   animation-name: pulse_kf;
-  animation-duration: 1s;
+  animation-duration: 0.5s;
   animation-iteration-count: infinite;
   animation-timing-function: linear;
   animation-direction: alternate;

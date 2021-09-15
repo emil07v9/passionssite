@@ -21,7 +21,6 @@ async function hentdata() {
 // Når menuen vises, bestemmers der her hvad der skal vises om hver ret og hvor informationerne om disse skal placeres henne
 function visListe() {
   container.textContent = "";
-
   listeDestinationer.forEach((dest) => {
     if (filter === dest.land || filter == dest.ferietype || filter == "alle") {
       let klon = temp.cloneNode(true);
@@ -37,9 +36,11 @@ function visListe() {
     }
   });
 }
+
 // Oprettelse af start function. denne starter når DOM'en er loaded
 document.addEventListener("DOMContentLoaded", start);
 
+// Definition af start function - Her gøres knapperne klikbare + der oprettes filter på dem
 function start() {
   const filterKnapper = document.querySelectorAll(".knapper nav button");
   filterKnapper.forEach((knap) =>
@@ -47,12 +48,13 @@ function start() {
   );
   hentdata();
 }
+// Her defineres hvad der vises når en knap er trykket på og hvad der filtreres
 function filtrerDestinationer() {
   filter = this.dataset.kategori;
-
   document.querySelector(".valgt").classList.remove("valgt");
   this.classList.add("valgt");
   visListe();
 
+  // Definering af tekst på h2
   kategoriNavn.textContent = this.textContent;
 }

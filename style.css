@@ -316,7 +316,7 @@ header nav {
 button {
   font-family: balboa-plus-fill, sans-serif;
   letter-spacing: 0.2ch;
-  font-size: 1rem;
+  /* font-size: 1rem; */
   color: black;
   border: 0.1rem solid black;
   background-color: transparent;
@@ -429,7 +429,7 @@ footer a:hover {
   }
 
   button {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #menu li {

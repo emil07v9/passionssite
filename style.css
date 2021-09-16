@@ -430,10 +430,13 @@ footer a:hover {
     display: inline;
     text-decoration: none;
     font-size: 5rem;
-    rotate: 270deg;
     grid-column: 2/3;
     grid-row: 2;
     color: #000;
+  }
+
+  #pil_ned figure {
+    transform: rotate(270deg);
   }
 
   button {

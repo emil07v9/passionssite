@@ -58,14 +58,18 @@ p {
   font-style: normal;
 }
 
-/* Om os side */
+/********************* Om os side *******************/
+body .om_os {
+  overflow-x: hidden;
+}
 .om_os #first_section {
   padding: 0.1rem;
   padding-top: 1rem;
   padding-bottom: 2rem;
-  background-color: #b6d3b4c2;
   display: grid;
+  grid-column: 1/-1;
   place-items: center;
+  background-color: #b7c8b077;
 }
 
 .om_os_tekst {
@@ -99,7 +103,6 @@ p {
 }
 
 /* Kontaktformular */
-
 input[type="text"],
 select,
 textarea {
@@ -353,14 +356,22 @@ button:after {
 #single_liste,
 #tilbage_knap {
   grid-column: 2/3;
+  margin-left: 0.5rem;
+}
+
+#tilbage_knap {
+  margin-top: 0.5rem;
 }
 #single_liste h2 {
   text-align: center;
 }
 
 #single_liste img {
-  height: 20rem;
+  height: 25rem;
   width: auto;
+}
+.single_view {
+  background-color: #ebce9d67;
 }
 
 /********************** FOOTER *********************/
@@ -374,11 +385,8 @@ footer {
   display: grid;
   justify-content: center;
   margin-top: 1rem;
-}
-
-/* Centrering af tekst */
-footer {
-  text-align: center;
+  text-align: center; /* Centrering af tekst */
+  margin-top: 3rem;
 }
 
 /* Ikoner vandret og center */
@@ -456,6 +464,22 @@ footer a:hover {
   }
   #pil_ned {
     grid-row: 3;
+  }
+
+  .om_os {
+    display: grid;
+    grid-template-columns:
+      minmax(1rem, 1fr)
+      minmax(auto, 1200px)
+      minmax(1rem, 1fr);
+  }
+
+  .om_os > * {
+    grid-column: 1/-1;
+  }
+
+  .om_os .kontaktformular {
+    grid-column: 2;
   }
 }
 
